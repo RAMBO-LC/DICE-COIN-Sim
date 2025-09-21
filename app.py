@@ -8,14 +8,15 @@ from io import BytesIO
 from PIL import Image, ImageDraw, ImageFont
 import matplotlib.pyplot as plt
 
+
 # Try to import plotly with fallback
 try:
     import plotly.graph_objects as go
     PLOTLY_AVAILABLE = True
 except ImportError:
     PLOTLY_AVAILABLE = False
-    st.warning("Plotly is not installed. Charts will not be available. Please install with: pip install plotly") 
-    
+    st.warning("Plotly is not installed. Charts will not be available. Please install with: pip install plotly")
+
 def calculate_dice_theoretical(num_dice, dice_sides):
     """Calculate theoretical probabilities for dice"""
     if num_dice == 1:
