@@ -1,15 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-
-try:
-    import plotly.graph_objects as go
-    PLOTLY_AVAILABLE = True
-except ImportError:
-    PLOTLY_AVAILABLE = False
-    import streamlit as st
-    st.warning("Plotly is not installed. Charts will not be available. Please install with: pip install plotly")
-
+import plotly.graph_objects as go
 from scipy.stats import chisquare
 import base64
 from io import BytesIO
